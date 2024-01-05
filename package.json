@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@fireworks-js/web": "^2.10.7",
+    "fireworks-js": "^2.10.7"
+  }
+}

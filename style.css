@@ -1,0 +1,126 @@
+@property --k {
+    syntax: "<number>";
+    initial-value: 0;
+    inherits: false;
+  }
+  html, body {
+    display: grid;
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  svg[height="0"] {
+    position: absolute;
+  }
+  
+  h1 {
+    /* no pseudo needed */
+    --k: 0;
+    place-self: center;
+    background: linear-gradient(90deg, hsl(calc(var(--k)*1turn), 95%, 65%), hsl(calc(var(--k)*1turn + 90deg), 95%, 65%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font: 900 clamp(.875em, 7.25vw, 5em) arial black, sans-serif;
+    filter: url(#f);
+    text-align: center;
+    text-transform: uppercase;
+    /* needs support for animating custom properties */
+    /* Firefox not quite there yet, but it's coming */
+    animation: k 4s linear infinite;
+  }
+  
+  @keyframes k {
+    to {
+      --k: 1 ;
+    }
+  }
+
+.fireworks{
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+} 
+.label{
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    position: absolute;
+    text-align: center;
+    font-size: 8vh;
+    color: white;
+    background-color: rgba(0, 128, 0, 0.1);
+    /* no pseudo needed */
+    --k: 0;
+    place-self: center;
+    background: linear-gradient(90deg, hsl(calc(var(--k)*1turn), 95%, 65%), hsl(calc(var(--k)*1turn + 90deg), 95%, 65%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font: 900 clamp(.875em, 7.25vw, 5em) arial black, sans-serif;
+    filter: url(#f);
+    text-align: center;
+    text-transform: uppercase;
+    animation: k 4s linear infinite;
+}
+@keyframes k {
+  to {
+    --k: 1 ;
+  }
+}
+.dojo2-dragon {
+  max-width: 100%;
+  padding-left: 35%;
+  justify-items: center;
+}
+.dojo2-dragon.outlined path {
+  fill: transparent;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 0.4;
+}
+.dojo2-dragon.outlined .cls-24, .dojo2-dragon.outlined .cls-25, .dojo2-dragon.outlined .cls-26, .dojo2-dragon.outlined .cls-28, .dojo2-dragon.outlined .cls-29, .dojo2-dragon.outlined .cls-30 {
+  display: none;
+  transition: 2s ease;
+}
+.dojo2-dragon.animate path {
+  stroke-dashoffset: 0 !important;
+}
+
+.toggle-animation {
+  cursor: pointer;
+  display: block;
+  padding: 10px 15px;
+  margin: 0 0 30px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #2badee;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.toggle-animation:hover, .toggle-animation:focus {
+  background-color: #0d73a6;
+}
+.container{
+  width: auto;
+  height: auto;
+}
